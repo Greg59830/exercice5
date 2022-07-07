@@ -1,0 +1,46 @@
+.fizzbuzz {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#count {
+    height: 250px;
+    width: 250px;
+    display: grid;
+}
+
+#count-background, #count-foreground {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#count-background {
+    height: 250px;
+    width: 250px;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(91, 173, 255);
+    border-radius: 50%;
+}
+
+#count-background span, #count-decrement i, #count-increment i {
+    font-size: 3rem;
+}
+
+#count-foreground {
+    display: grid;
+    grid-template: 1fr 80px / 80px 1fr 80px;
+}
+
+#count-decrement, #count-increment {
+    grid-row: 2
+}
+
+#count-decrement {
+    grid-column: 1;
+}
+
+#count-increment {
+    grid-column: 3;
+}

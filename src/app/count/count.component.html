@@ -1,0 +1,22 @@
+<div class="container my-3">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 bg-dark text-white rounded p-3">
+            <h5 class="display-5">Exo Compteur</h5>
+            <hr>
+            <div class="d-flex justify-content-center">
+                <div id="count">
+                    <div id="count-background">
+                        <span [ngStyle]="{color: counterValue % 15 == 0  && counterValue != 0 ? 'red' : 
+                        counterValue % 5 == 0 && counterValue != 0 ? 'white' : 
+                        counterValue % 3 == 0  && counterValue != 0 ? 'blue' : 'black'}"
+                        [ngClass]="{'fizzbuzz': isText(counterDisplay)}"> {{ counterDisplay }} </span>
+                    </div>
+                    <div id="count-foreground">
+                        <button class="btn btn-primary rounded-circle" id="count-decrement" (click)="onChangeCounter(-1)" [disabled]="counterValue == 0"><i class="bi bi-dash"></i></button>
+                        <button class="btn btn-primary rounded-circle" id="count-increment" (click)="onChangeCounter(1)"><i class="bi bi-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
